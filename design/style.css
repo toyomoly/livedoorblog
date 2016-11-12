@@ -21,7 +21,8 @@ body {
 	background-attachment: fixed;
 	background-position: center bottom;
 	background-size: cover;
-	background-color: #73bca8;
+/*	background-color: #73bca8; */
+	background-color: #fff;
 }
 #container {
 	margin: 0 auto;
@@ -391,4 +392,32 @@ body.layout-2col .archives-header {
 }
 #ad2 a.addescription {
 	color:#666;
+}
+
+/* User Customize
+----------------------------------------------- */
+.article-title a {
+	color: #0a82e2;
+}
+
+.article-body-inner h3 {
+	background-color: #555;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 15px 20px 10px 20px;
+}
+
+.article-body-inner h4 {
+	border-left: 10px solid #aaa;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 26px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 15px 20px 10px 20px;
 }
