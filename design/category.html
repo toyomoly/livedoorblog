@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja" itemscope itemtype="http://schema.org/Blog">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<$HeadSectionCommon$>
+<$OGP$>
+<link rel="alternate" media="handheld" type="application/xhtml+xml" href="<$BlogMobileUrl$>" />
+<IfFoafUrl><link rel="meta" type="application/rdf+xml" title="FOAF" href="<$FoafUrl$>" /></IfFoafUrl>
+<title><$CategoryName ESCAPE$> : <$BlogTitle ESCAPE$></title>
+<!--[if lt IE 9]>
+<script src="<$PartsBaseUrl$>/js/html5.js"></script>
+<![endif]-->
+<script src="<$PartsBaseUrl$>/js/usr/import.js"></script>
+</head>
+<body class="default_2012 page-category layout-2col<IfBlogBackgroundImageUrl> show-bg-image" style="background-image:url(<$BlogBackgroundImageUrl$>);</IfBlogBackgroundImageUrl>">
+
+<$BlogHeader$>
+
+<div id="wrapper">
+
+<div id="container">
+
+<!-- ブログタイトル、説明 -->
+<header id="blog-header">
+	<hgroup>
+		<h1 id="blog-title"><a href="<$BlogUrl$>"><$BlogTitle ESCAPE$></a></h1>
+		<h2 id="blog-description"><$BlogDescription$></h2>
+	</hgroup>
+</header>
+<!-- /ブログタイトル、説明 -->
+
+<div id="content">
+
+<div id="main" class="column">
+<div id="main-inner">
+
+<header class="archives-header" id="category-header">
+<h1>
+<IfIsTagTemplate>タグ：<$TagName ESCAPE$></IfIsTagTemplate>
+<IfIsSearchTagsTemplate>タグ：<$TagName ESCAPE$></IfIsSearchTagsTemplate>
+<IfIsSearchTemplate>キーワード：<$SearchKeywords ESCAPE$>を含む記事</IfIsSearchTemplate>
+<IfIsAuthorTemplate><$AuthorName ESCAPE$></IfIsAuthorTemplate>
+<UnlessIsTagTemplate><UnlessIsSearchTagsTemplate><UnlessIsSearchTemplate><UnlessIsAuthorTemplate>
+カテゴリ：<IfHasParentCategory><a href="<$ParentCategoryUrl$>"><$ParentCategoryName ESCAPE$></a> &gt; </IfHasParentCategory>
+<a href="<$CategoryUrl$>"><$CategoryName ESCAPE$></a>
+</UnlessIsAuthorTemplate></UnlessIsSearchTemplate></UnlessIsSearchTagsTemplate></UnlessIsTagTemplate>
+</h1>
+</header>
+
+<IfIsSearchTemplate>
+<UnlessSearchResults>
+<div class="noresult-message"><p>該当する記事はありません</p></div>
+</UnlessSearchResults>
+</IfIsSearchTemplate>
+<IfIsSearchTagsTemplate>
+<UnlessSearchResults>
+<div class="noresult-message"><p>該当する記事はありません</p></div>
+</UnlessSearchResults>
+</IfIsSearchTagsTemplate>
+
+<!-- ArticlesLoop Start -->
+<!-- google_ad_section_start -->
+<CategorizedArticlesLoop>
+
+<$TrackBackAutoDiscovery$>
+<!-- 記事全体 -->
+<article class="article<IfFirstArticle> first-article</IfFirstArticle><IfLastArticle> last-article</IfLastArticle>" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- 記事ヘッダー、記事タイトル -->
+<header class="article-header">
+	<p class="article-date"><time datetime="<$ArticleDateISO8601$>" pubdate="pubdate"><$ArticleDate$></time></p>
+	<h1 class="article-title" itemprop="name"><a href="<$ArticlePermalink$>" itemprop="url"><$ArticleTitle ESCAPE$></a></h1>
+	<IfArticleRating><span class="article-rating"><$ArticleRatingIcon$></span></IfArticleRating>
+</header>
+<!-- /記事ヘッダー、記事タイトル -->
+
+<!-- 記事本文 -->
+<div class="article-body">
+	<div class="article-body-inner">
+	<$CommonTheme$>
+	<$ArticleBody$>
+	<IfArticleBodyMore><span class="article-continue"><a href="<$ArticlePermalink$>#more">続きを読む</a></span></IfArticleBodyMore>
+	<$ArticleTagsList$>
+	</div>
+</div>
+<!-- /記事本文 -->
+
+<!-- 記事フッター、カテゴリ、コメント、ソーシャルボタン -->
+<footer class="article-footer">
+	<ul class="article-meta">
+		<IfArticleAllowComment>
+		<li class="article-comment-count">
+			<dl><dt>コメント数:</dt><dd><a href="<$ArticlePermalink$>#comments"><$ArticleCommentCount$> コメント</a></dd></dl>
+		</li>
+		</IfArticleAllowComment>
+		<IfArticleCategory1>
+		<li class="article-category">
+			<dl><dt>カテゴリ:</dt><dd class="article-category1"><a href="<$ArticleCategory1Url$>"><$ArticleCategory1$></a></dd><IfArticleCategory2><dd class="article-category2"><a href="<$ArticleCategory2Url$>"><$ArticleCategory2$></a></dd></IfArticleCategory2></dl>
+		</li>
+		</IfArticleCategory1>
+		<li class="article-author">by <span itemprop="author"><$ArticleAuthorNickname$></span></li>
+	</ul>
+</footer>
+<!-- /記事フッター、カテゴリ、コメント、ソーシャルボタン -->
+</article>
+<!-- /記事全体 -->
+
+<IfFirstArticle><$Advertise$></IfFirstArticle>
+
+</CategorizedArticlesLoop>
+<!-- google_ad_section_end -->
+<!-- ArticlesLoop End -->
+
+<!-- ページ送り -->
+<SetVar ArchivesPagerType>2</SetVar>
+<$ArchivesPager$>
+<!-- /ページ送り -->
+
+<!-- /#main-inner --></div>
+<!-- /#main --></div>
+
+<!-- サイドバー -->
+<aside id="sidebar" class="column">
+<div id="sidebar-inner">
+<$PluginList_A$>
+<$PluginList_B$>
+</div>
+<$LDServices$>
+</aside>
+<!-- /サイドバー -->
+
+<p class="to-pagetop"><a href="#"><img src="http://parts.blog.livedoor.jp/img/usr/default_2012/common/to_pagetop.png" width="70" height="70" alt="このページのトップヘ" /></a></p>
+
+<!-- /#content --></div>
+<!-- /#container --></div>
+
+<!-- ブログのフッター -->
+<footer id="blog-footer">
+<$BlogFooter$>
+</footer>
+<!-- /ブログのフッター -->
+
+<!-- /#wrapper --></div>
+
+</body>
+</html>
